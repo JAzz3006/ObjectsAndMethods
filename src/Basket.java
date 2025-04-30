@@ -1,6 +1,5 @@
 public class Basket {
-
-    private static int count = 0;
+    private static int allBasketsCount = 0;
     private String items = "";
     private int totalPrice = 0;
     private int limit;
@@ -33,12 +32,12 @@ public class Basket {
         Basket.allBasketsCost = Basket.allBasketsCost + totalPrice;
     }
 
-    public static int getCount() {
-        return count;
+    public static int getAllBasketsCount() {
+        return allBasketsCount;
     }
 
     public static void increaseCount(int count) {
-        Basket.count = Basket.count + count;
+        Basket.allBasketsCount = Basket.allBasketsCount + count;
     }
 
     public static int getAllBasketsCost() {
@@ -47,12 +46,10 @@ public class Basket {
 
     public void add(String name, int price) {
         add(name, price, 1, 0);
-        allBasketsCost = allBasketsCost + price * count;
     }
 
     public void add(String name, int price, double weight) {
         add(name, price, 1,weight);
-        allBasketsCost = allBasketsCost + price * count;
     }
 
 
