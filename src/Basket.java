@@ -63,7 +63,6 @@ public class Basket {
         add(name, price, 1,weight);
     }
 
-
        public void add(String name, int price, int count, double weight) {
         boolean error = false;
         if (contains(name)) {
